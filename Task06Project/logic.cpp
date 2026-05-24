@@ -11,16 +11,19 @@ int recursion(int number) {
 	{
 		return 2;
 	}
-	
-	if (number % 2 == 0) {
 
-	}
+	return number + recursion(number - 2);
 }
 
 int sum(int number) {
-	if (number < 0) 
+	if (number <= 0) 
 	{
 		return -1;
+	}
+
+	if (number % 2 == 1)
+	{
+		number--;
 	}
 
 	return recursion(number);
